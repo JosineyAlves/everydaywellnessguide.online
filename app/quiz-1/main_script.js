@@ -20,7 +20,7 @@ $(document).ready(function () {
     // Redireciona para URL quando qualquer opção da etapa 3 for clicada (No ou Yes)
     $("#step3 input[type='radio']").click(function () {
         setTimeout(function () {
-            window.location.href = "https://tipsforwellness.site/app/vsl";
+            window.location.href = "http://everydaywellnessguide.online/app/vsl";
         }, 500);
     });
 });

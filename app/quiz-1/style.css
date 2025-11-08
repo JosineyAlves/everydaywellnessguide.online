@@ -14,7 +14,7 @@ body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	background-color: #F2F2F2;
+	background-color: #F3F3F3;
 }
 
 body {
@@ -27,10 +27,10 @@ body {
 	font-size: 16px;
 	line-height: 1.2;
 	text-align: center;
-	color: #448155;
+	color: #5a9f6b;
 	display: flex;
 	flex-direction: column;
-	background-color: #F9FAEF;
+	background-color: #FAFBEF;
 }
 
 img {
@@ -50,14 +50,14 @@ p {
 }
 
 header {
-	background-color: #367949;
+	background: linear-gradient(135deg, #4a9f5f 0%, #5ba870 100%);
 	box-shadow: 0 8px 10px -4px #949494;
 	-webkit-box-shadow: 0 8px 10px -4px #949494;
 	-moz-box-shadow: 0 8px 10px -4px #949494;
 	padding: 0;
 	position: relative;
 	z-index: 1;
-	margin-bottom: 10px;
+	margin-bottom: 12px;
 }
 
 .header_container {
@@ -70,7 +70,7 @@ header {
 }
 
 #surveyContainer {
-	width: 768px;
+	width: 770px;
 	padding-bottom: 0;
 	position: relative;
 	overflow: visible;
@@ -79,20 +79,20 @@ header {
 
 #surveyContainer.surveyContainerOne {
 	height: auto;
-	min-height: 350px;
-	padding-bottom: 20px;
+	min-height: 355px;
+	padding-bottom: 22px;
 }
 
 #surveyContainer.surveyContainerTwo {
 	height: auto;
-	min-height: 450px;
-	padding-bottom: 20px;
+	min-height: 455px;
+	padding-bottom: 22px;
 }
 
 #surveyContainer.surveyContainerThree {
 	height: auto;
-	min-height: 350px;
-	padding-bottom: 20px;
+	min-height: 355px;
+	padding-bottom: 22px;
 }
 
 .main {
@@ -123,7 +123,7 @@ header {
 }
 
 .box h2 {
-	font-size: 28px;
+	font-size: 29px;
 	max-width: 100%;
 	margin-inline: auto;
 	width: 100%;
@@ -148,12 +148,12 @@ input[type=radio]:checked+label {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	column-gap: 10px;
+	column-gap: 12px;
 }
 
 .answers__item {
-	margin-block-end: 10px;
-	flex: 0 0 calc(25% - 10px);
+	margin-block-end: 12px;
+	flex: 0 0 calc(25% - 12px);
 }
 
 .answers__item label {
@@ -182,7 +182,7 @@ label span {
 	font-size: 18px;
 	font-weight: 700;
 	text-align: center;
-	color: #3c516d;
+	color: #3d526e;
 }
 
 .answers__item--label-over input:checked~label:after {
@@ -236,7 +236,7 @@ label span {
 	max-width: 100px;
 	height: 8px;
 	border-radius: 4px;
-	background-color: #CCE4CC;
+	background-color: #CDE5CD;
 	transition: background-color 1000ms ease-in-out 500ms;
 	list-style: none;
 }
@@ -245,43 +245,43 @@ label span {
 .pagination__item--one,
 .surveyContainerThree .pagination__item--three,
 .surveyContainerThree .pagination__item--two {
-	background-color: #417e52;
+	background-color: #52a066;
 }
 
 .skip-section {
 	padding: 20px 0;
 	text-align: center;
-	background-color: #F9FAEF;
+	background-color: #FAFBEF;
 	width: 100%;
-	margin-top: 60px;
+	margin-top: 62px;
 }
 
 .skip {
 	text-align: center;
-	width: 325px;
+	width: 330px;
 	max-width: 90%;
 	display: inline-block;
 	margin: 0 auto;
-	padding: 15px 22.5px;
+	padding: 16px 23px;
 	font-weight: 700;
 	text-decoration: none;
 	font-family: "Mulish Regular", sans-serif;
-	color: #367949;
+	color: #4a9f5f;
 }
 
 .nextStep {
 	align-self: center;
 	width: 100%;
 	max-width: 340px;
-	margin: 35px auto 3px;
-	font-size: 22px;
+	margin: 36px auto 4px;
+	font-size: 23px;
 	font-weight: 900;
 	line-height: 2.55;
 	text-align: center;
 	border: 0;
 	-webkit-animation: fadein 2s;
 	animation: fadein 2s;
-	background-color: #63b079;
+	background-color: #75c28d;
 	display: none;
 	font-family: "Mulish Regular", sans-serif;
 	font-weight: bold;
@@ -376,9 +376,9 @@ label span {
 
 .main-footer {
 	width: 100%;
-	background-color: #367949;
+	background-color: #4a9f5f;
 	color: #fff;
-	padding: 30px 20px;
+	padding: 32px 20px;
 	margin-top: auto;
 	overflow-x: hidden;
 	box-sizing: border-box;
