@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: #000;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  background: #f0f0f0;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .container {
+  background: #fff;
+  width: 100%;
+  max-width: 1100px;
+  padding: 30px 47px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 53px;
+}
+@media (max-width: 900px) {
+  main .container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 20px;
+  }
+}
+main .container .content h1 {
+  margin-bottom: 15px;
+  font-size: 38px;
+}
+@media (max-width: 900px) {
+  main .container .content h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+}
+main .container .content p {
+  color: #555555;
+  line-height: 1.4;
+  margin-bottom: 23px;
+}
+main .container .content p b {
+  color: #696969;
+}
+main .container .content p a {
+  color: #007bff;
+  text-decoration: underline;
+}
+main .container .content ul {
+  display: grid;
+  gap: 10px;
+}
+main .container .content ul li {
+  display: flex;
+  line-height: 1;
+  align-items: center;
+  font-weight: bold;
+  gap: 8px;
+}
+main .container .content ul li::before {
+  content: url(../img/gg_check-o.svg);
+}
+main .container .area-video {
+  display: grid;
+  place-items: center;
+  gap: 24px;
+}
+main .container .area-video .btn {
+  background: #007bff;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  max-width: 300px;
+  transition: background 0.7s;
+  width: 100%;
+  border-radius: 5px;
+  height: 60px;
+  font-weight: bold;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px 0px;
+}
+main .container .area-video .btn:hover {
+  background: #0056b3;
+}
+
+footer {
+  padding: 20px 0;
+  background: #333333;
+}
+footer .container {
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+}
+footer * {
+  color: #cccccc;
+}
+footer nav {
+  display: flex;
+  justify-content: center;
+  gap: 23px;
+  margin-bottom: 10px;
+}
+@media (max-width: 900px) {
+  footer nav {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+}
+footer nav a {
+  color: #fff;
+  font-size: 19px;
+}
+footer nav a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 900px) {
+  footer nav a {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+footer p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+footer span {
+  display: block;
+  text-align: center;
+  font-size: 10px;
+  margin-bottom: 8px;
+}
