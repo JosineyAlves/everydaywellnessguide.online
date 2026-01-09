@@ -9,6 +9,31 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&amp;family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
 		<link rel="stylesheet" href="assets/css/style.css" />
+		<script>
+  const link = 'https://everydaywellnessguide.online/kary/back/';
+
+  function setBackRedirect(url) {
+    let urlBackRedirect = url;
+    urlBackRedirect = urlBackRedirect =
+      urlBackRedirect.trim() +
+      (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
+      document.location.search.replace('?', '').toString();
+
+    history.pushState({}, '', location.href);
+    history.pushState({}, '', location.href);
+    history.pushState({}, '', location.href);
+
+    window.addEventListener('popstate', () => {
+      console.log('onpopstate', urlBackRedirect);
+      setTimeout(() => {
+        location.href = urlBackRedirect;
+      }, 1);
+    });
+  }
+
+  setBackRedirect(link);
+</script>
+
 		<style>
 			.esconder {
 			display: none;
@@ -833,8 +858,8 @@
 		<script src="assets/js/main.js"></script>
 		<script>
 			var listPitch = {
-			  '6942f0daf10935ae385277b2': { delay: 2320, utm: 'utm_content=vslA' },
-			  '6942f0a67639f40940e85da2': { delay: 1672, utm: 'utm_content=vslB' }
+			  '694aee9eb6c0dcc467226950': { delay: 2320, utm: 'utm_content=vslA' },
+			  '694aee9bb6c0dcc467226936': { delay: 1672, utm: 'utm_content=vslB' }
 			};
 			
 			var alreadyInitialized = false;
