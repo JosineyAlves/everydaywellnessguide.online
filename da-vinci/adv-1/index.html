@@ -6,7 +6,7 @@
     <title>Lander-1</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Domine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Domine:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
       html { font-size: 16px; -webkit-text-size-adjust: 100%; }
@@ -29,17 +29,21 @@
       .footer-legal { font-size: 0.875rem; color: #3636368f; text-align: center; }
       .footer-legal a { text-decoration: underline; color: #3636368f; }
       .footer-legal a:hover { text-decoration: none; }
+      .hero-btn { display: inline-block; text-decoration: none; text-align: center; font-family: 'Open Sans', sans-serif; border-radius: 9px; padding: 25px 70px; font-size: 35px; letter-spacing: 0; line-height: 100%; font-weight: 700; border: 2px solid #ffb71e; cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden; z-index: 1; background: rgb(255, 238, 43); color: rgb(13, 15, 97); margin: 0 auto 15px; }
+      .presell-hero .container { text-align: center; }
       @media (max-width: 768px) {
           .presell-header { padding: 15px 0 8px; }
           .headline { padding: 0 10px; }
           .hero-image { width: 100%; }
+          .hero-btn { padding: 25px 60px; font-size: 32px; }
           .hero-subtitle { font-size: 1rem; }
           .hero-badge-img { width: 50%; }
-          .presell-footer { padding-top: 80px; }
+          .presell-footer { padding-top: 40px; }
       }
       @media (max-width: 480px) {
           .container { padding: 0 12px; }
-          .headline { font-size: 1.5rem; }
+          .headline { font-size: 1.2rem; }
+          .hero-btn { padding: 25px 60px; font-size: 28px; }
           .hero-badge-img { width: 60%; }
       }
   </style>
@@ -82,6 +86,7 @@
                     <img src="img/unnamed.png" alt="DaVinci Frequency" class="hero-image">
                 </a>
                 <p class="hero-subtitle">(Watch The Shocking Discovery @ 1:45min)</p>
+                <a href="https://everydaywellnessguide.online/da-vinci/vsl/" class="hero-btn">WATCH VIDEO</a>
                 <div class="hero-badge">
                     <img src="img/fc00db42cd71a4a2d6da13f0aba6359d.webp" alt="Selo de confiança" class="hero-badge-img">
                 </div>
