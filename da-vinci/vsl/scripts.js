@@ -106,6 +106,7 @@
 
 // ============================================
 // MODAL POPUP FUNCTIONALITY
+// Exit intent (desktop) + Back button (mobile/desktop)
 // ============================================
 
 (function() {
@@ -113,20 +114,43 @@
     const closeModalBtn = document.getElementById('closeModal');
     const closePopupBtn = document.getElementById('closePopupBtn');
 
-    // Show modal on page load after delay
-    setTimeout(function() {
-        if (modal) {
+    function showModal() {
+        if (modal && !modal.classList.contains('active')) {
             modal.classList.add('active');
         }
-    }, 5000); // Show after 5 seconds
+    }
 
-    // Close modal functions
     function closeModal() {
         if (modal) {
             modal.classList.remove('active');
         }
     }
 
+    // ---- DESKTOP: Exit intent (mouse saindo pelo topo em direção a abas/barra de endereço) ----
+    function isDesktop() {
+        return window.matchMedia('(min-width: 771px)').matches;
+    }
+
+    document.addEventListener('mouseout', function(e) {
+        if (!isDesktop()) return;
+        // Mouse saindo pela borda superior
+        if (e.clientY <= 5) {
+            showModal();
+        }
+    });
+
+    // ---- MOBILE e DESKTOP: Botão Voltar (History API) ----
+    (function initBackButtonTrap() {
+        history.pushState({ backModal: true }, '');
+
+        window.addEventListener('popstate', function() {
+            showModal();
+            // Re-adiciona state para manter o usuário na página (padrão "one more back")
+            history.pushState({ backModal: true }, '');
+        });
+    })();
+
+    // ---- Fechar modal ----
     if (closeModalBtn) {
         closeModalBtn.addEventListener('click', closeModal);
     }
@@ -138,7 +162,6 @@
         });
     }
 
-    // Close modal when clicking outside
     if (modal) {
         modal.addEventListener('click', function(e) {
             if (e.target === modal) {
@@ -147,7 +170,6 @@
         });
     }
 
-    // Close on ESC key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && modal && modal.classList.contains('active')) {
             closeModal();
