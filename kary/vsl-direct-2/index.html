@@ -384,19 +384,11 @@
 					<h2><b>Real Life</b> Changing Results:</h2>
 					<span class="aval wk">
 					</span>
-					<div class="videos-grid">
-						<div class="video-card">
-							<script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js", s.async=!0,document.head.appendChild(s); </script> <div id="ifr_694b57a887bdd2a5aeac9194_wrapper" style="margin: 0 auto; width: 100%; max-width: 400px;"> <div style="position: relative; padding: 133.33333333333331% 0 0 0;" id="ifr_694b57a887bdd2a5aeac9194_aspect"> <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_694b57a887bdd2a5aeac9194" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" referrerpolicy="origin" onload=" this.onload=null, this.src='https://scripts.converteai.net/528ac277-8029-4ec6-a3db-8da993dd5d9a/players/694b57a887bdd2a5aeac9194/v4/embed.html' +(location.search||'?') +'&vl=' +encodeURIComponent(location.href)"></iframe> </div> </div>
-						</div>
-						<div class="video-card">
-							<script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js", s.async=!0,document.head.appendChild(s); </script> <div id="ifr_694b57a190b70171e37ca1f2_wrapper" style="margin: 0 auto; width: 100%; max-width: 400px;"> <div style="position: relative; padding: 133.33333333333331% 0 0 0;" id="ifr_694b57a190b70171e37ca1f2_aspect"> <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_694b57a190b70171e37ca1f2" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" referrerpolicy="origin" onload=" this.onload=null, this.src='https://scripts.converteai.net/528ac277-8029-4ec6-a3db-8da993dd5d9a/players/694b57a190b70171e37ca1f2/v4/embed.html' +(location.search||'?') +'&vl=' +encodeURIComponent(location.href)"></iframe> </div> </div>
-						</div>
-						<div class="video-card">
-							<script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js", s.async=!0,document.head.appendChild(s); </script> <div id="ifr_694b57aca54e8f46c188cfd4_wrapper" style="margin: 0 auto; width: 100%; max-width: 400px;"> <div style="position: relative; padding: 133.33333333333331% 0 0 0;" id="ifr_694b57aca54e8f46c188cfd4_aspect"> <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_694b57aca54e8f46c188cfd4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" referrerpolicy="origin" onload=" this.onload=null, this.src='https://scripts.converteai.net/528ac277-8029-4ec6-a3db-8da993dd5d9a/players/694b57aca54e8f46c188cfd4/v4/embed.html' +(location.search||'?') +'&vl=' +encodeURIComponent(location.href)"></iframe> </div> </div>
-						</div>
-						<div class="video-card">
-							<script type="text/javascript"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js", s.async=!0,document.head.appendChild(s); </script> <div id="ifr_694b57a4f757812677c36523_wrapper" style="margin: 0 auto; width: 100%; max-width: 400px;"> <div style="position: relative; padding: 133.33333333333331% 0 0 0;" id="ifr_694b57a4f757812677c36523_aspect"> <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_694b57a4f757812677c36523" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" referrerpolicy="origin" onload=" this.onload=null, this.src='https://scripts.converteai.net/528ac277-8029-4ec6-a3db-8da993dd5d9a/players/694b57a4f757812677c36523/v4/embed.html' +(location.search||'?') +'&vl=' +encodeURIComponent(location.href)"></iframe> </div> </div>
-						</div>
+					<div class="videos-grid" data-lazy-videos="true">
+						<div class="video-card" data-video-id="694b57a887bdd2a5aeac9194"></div>
+						<div class="video-card" data-video-id="694b57a190b70171e37ca1f2"></div>
+						<div class="video-card" data-video-id="694b57aca54e8f46c188cfd4"></div>
+						<div class="video-card" data-video-id="694b57a4f757812677c36523"></div>
 					</div>
 					<a href="#kits" class="btn">Order Now</a>
 				</div>
@@ -837,8 +829,8 @@
 		</style>
 		<script>
 			var listPitch = {
-			  '694aee9eb6c0dcc467226950': { delay: 2320, utm: 'utm_content=vslA' },
-			  '694aee9bb6c0dcc467226936': { delay: 1672, utm: 'utm_content=vslB' }
+			  '694aee9eb6c0dcc467226950': { delay: 60, utm: 'utm_content=vslA' },
+			  '694aee9bb6c0dcc467226936': { delay: 60, utm: 'utm_content=vslB' }
 			};
 			
 			var alreadyInitialized = false;
@@ -872,6 +864,116 @@
 			  player.displayHiddenElements(pitchConfig.delay, ['.esconder'], { persist: true });
 			  //updateLinksWithUTM(pitchConfig.utm);
 			});
+			
+			// Carregamento atrasado dos vídeos em iframe
+			(function() {
+			  var videosLoaded = false;
+			  var sdkLoaded = false;
+			  
+			  function loadVideoSDK() {
+			    if (sdkLoaded) return;
+			    sdkLoaded = true;
+			    var s = document.createElement("script");
+			    s.src = "https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js";
+			    s.async = true;
+			    document.head.appendChild(s);
+			  }
+			  
+			  function loadVideo(videoId, container) {
+			    var wrapperId = 'ifr_' + videoId + '_wrapper';
+			    var aspectId = 'ifr_' + videoId + '_aspect';
+			    var iframeId = 'ifr_' + videoId;
+			    
+			    var wrapper = document.createElement('div');
+			    wrapper.id = wrapperId;
+			    wrapper.style.cssText = 'margin: 0 auto; width: 100%; max-width: 400px;';
+			    
+			    var aspect = document.createElement('div');
+			    aspect.id = aspectId;
+			    aspect.style.cssText = 'position: relative; padding: 133.33333333333331% 0 0 0;';
+			    
+			    var iframe = document.createElement('iframe');
+			    iframe.id = iframeId;
+			    iframe.frameBorder = '0';
+			    iframe.allowFullscreen = true;
+			    iframe.src = 'about:blank';
+			    iframe.style.cssText = 'position: absolute; top: 0; left: 0; width: 100%; height: 100%;';
+			    iframe.referrerPolicy = 'origin';
+			    iframe.onload = function() {
+			      this.onload = null;
+			      this.src = 'https://scripts.converteai.net/528ac277-8029-4ec6-a3db-8da993dd5d9a/players/' + videoId + '/v4/embed.html' + (location.search || '?') + '&vl=' + encodeURIComponent(location.href);
+			    };
+			    
+			    aspect.appendChild(iframe);
+			    wrapper.appendChild(aspect);
+			    container.appendChild(wrapper);
+			  }
+			  
+			  function loadAllVideos() {
+			    if (videosLoaded) return;
+			    videosLoaded = true;
+			    
+			    loadVideoSDK();
+			    
+			    var videoCards = document.querySelectorAll('.videos-grid[data-lazy-videos="true"] .video-card[data-video-id]');
+			    videoCards.forEach(function(card) {
+			      var videoId = card.getAttribute('data-video-id');
+			      if (videoId && !card.querySelector('iframe')) {
+			        loadVideo(videoId, card);
+			      }
+			    });
+			  }
+			  
+			  // Observa quando a seção .esconder fica visível
+			  function observeSection() {
+			    var esconderSection = document.querySelector('.esconder');
+			    if (!esconderSection) return;
+			    
+			    var observer = new IntersectionObserver(function(entries) {
+			      entries.forEach(function(entry) {
+			        if (entry.isIntersecting && entry.intersectionRatio > 0) {
+			          loadAllVideos();
+			          observer.disconnect();
+			        }
+			      });
+			    }, {
+			      threshold: 0.1
+			    });
+			    
+			    observer.observe(esconderSection);
+			  }
+			  
+			  // Verifica se a seção já está visível (caso o displayHiddenElements já tenha executado)
+			  function checkIfVisible() {
+			    var esconderSection = document.querySelector('.esconder');
+			    if (esconderSection && window.getComputedStyle(esconderSection).display !== 'none') {
+			      loadAllVideos();
+			    } else {
+			      observeSection();
+			    }
+			  }
+			  
+			  // Aguarda o DOM estar pronto
+			  if (document.readyState === 'loading') {
+			    document.addEventListener('DOMContentLoaded', checkIfVisible);
+			  } else {
+			    setTimeout(checkIfVisible, 100);
+			  }
+			  
+			  // Fallback: verifica periodicamente se a seção ficou visível
+			  var checkInterval = setInterval(function() {
+			    var esconderSection = document.querySelector('.esconder');
+			    if (esconderSection && window.getComputedStyle(esconderSection).display !== 'none') {
+			      loadAllVideos();
+			      clearInterval(checkInterval);
+			    }
+			  }, 500);
+			  
+			  // Limpa o intervalo após 30 segundos para evitar loop infinito
+			  setTimeout(function() {
+			    clearInterval(checkInterval);
+			  }, 30000);
+			})();
 		</script>
 	</body>
 </html>
