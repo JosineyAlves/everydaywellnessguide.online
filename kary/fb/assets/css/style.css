@@ -1281,28 +1281,6 @@ footer nav a {
 	font-size: 12px
 }
 
-footer .footer-cta {
-	display: flex;
-	justify-content: center;
-	padding: 0 16px;
-	margin-bottom: -30px;
-}
-
-footer .btn-outline {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	padding: 8px 15px;
-	border: 1px solid #ffffff04;
-	border-radius: 32px;
-	color: #ffffff04;
-	text-transform: uppercase;
-	font-weight: 400;
-	background: transparent;
-	transition: all .2s ease;
-	gap: 8px
-}
-
 footer .disclaimer {
 	padding: 10px 0
 }
