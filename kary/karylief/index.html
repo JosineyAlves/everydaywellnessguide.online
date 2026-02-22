@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="Oferta especial">
+  <title>Karylief</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500;700;900&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+  <style>
+    /* Reset e base */
+    *, *::after, *::before { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Roboto', sans-serif;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      color: #000;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* Layout principal */
+    .page-wrap { overflow: hidden; }
+
+    /* Hero / Head section - sem Customer Rating, texto conforme políticas Google Ads */
+    .hero {
+      position: relative;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      background: #E9FAFF;
+      border-radius: 0 80px 0 60px;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: 
+        radial-gradient(ellipse 80% 50% at 20% 40%, rgba(255,255,255,.4) 0%, transparent 50%),
+        radial-gradient(ellipse 60% 40% at 80% 60%, rgba(255,255,255,.3) 0%, transparent 45%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 48px 24px 56px;
+      gap: 40px;
+    }
+    .hero-content {
+      flex: 1 1 400px;
+      max-width: 520px;
+    }
+    .hero-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(26px, 4vw, 38px);
+      font-weight: 700;
+      line-height: 1.2;
+      color: #2d3748;
+      margin-bottom: 16px;
+    }
+    .hero-desc {
+      font-size: 16px;
+      line-height: 1.5;
+      color: #4a5568;
+      margin-bottom: 20px;
+    }
+    .hero-features {
+      list-style: none;
+      margin-bottom: 24px;
+    }
+    .hero-features li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      color: #2d3748;
+      margin-bottom: 8px;
+    }
+    .hero-features li::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2310b981'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") no-repeat center;
+      background-size: contain;
+      flex-shrink: 0;
+    }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 28px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #1a1a1a;
+      background: linear-gradient(180deg, #fcd34d 0%, #f59e0b 100%);
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+    }
+    .hero-cta svg {
+      width: 22px;
+      height: 22px;
+    }
+    .hero-guarantee {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 16px;
+      font-size: 14px;
+      color: #4a5568;
+    }
+    .hero-guarantee svg {
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+    }
+    .hero-secure {
+      position: absolute;
+      bottom: 20px;
+      left: 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      background: #2563eb;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 6px;
+      transform: rotate(-3deg);
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+    }
+    .hero-secure svg {
+      width: 16px;
+      height: 16px;
+    }
+    .hero-visual {
+      flex: 1 1 440px;
+      max-width: 520px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .hero-visual img {
+      max-width: 100%;
+      width: 420px;
+      height: auto;
+      max-height: 460px;
+      object-fit: contain;
+    }
+    @media (max-width: 768px) {
+      .hero { min-height: auto; border-radius: 0 40px 0 30px; }
+      .hero-inner { flex-direction: column; padding: 32px 16px 48px; text-align: center; }
+      .hero-content { max-width: 100%; }
+      .hero-features { display: inline-block; text-align: left; margin-left: auto; margin-right: auto; }
+      .hero-secure { position: static; margin-top: 24px; transform: none; display: inline-flex; }
+    }
+
+    .kits-section {
+      background: #f2f5f4;
+      margin-top: 3px;
+      margin-bottom: 50px;
+      min-height: 1px;
+    }
+    .kits-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+      max-width: 1151px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+      gap: 28px;
+    }
+    @media (max-width: 1024px) {
+      .kits-section { padding-top: 80px; }
+      .kits-row { max-width: 100%; }
+    }
+    @media (max-width: 480px) {
+      .kits-section { padding-top: 0; }
+      .kits-row { flex-wrap: wrap; }
+    }
+
+    /* Colunas dos cards */
+    .kits-col {
+      flex-direction: column;
+      align-content: flex-start;
+      flex-wrap: wrap;
+      min-height: 1px;
+    }
+    .kits-col-1 { flex: 1 1 28%; max-width: 32%; }
+    .kits-col-2 { flex: 1 1 32%; max-width: 36%; }
+    .kits-col-3 { flex: 1 1 28%; max-width: 32%; }
+    @media (max-width: 1024px) {
+      .kits-row { gap: 20px; }
+      .kits-col-1 { flex: none; width: 100%; margin-left: 10px; margin-right: 5px; order: 2; max-width: none; }
+      .kits-col-2 { flex: none; width: 100%; margin-left: 5px; margin-right: 5px; order: 0; max-width: none; }
+      .kits-col-3 { flex: none; width: 100%; margin-left: 5px; margin-right: 8px; order: 1; max-width: none; }
+    }
+    @media (max-width: 480px) {
+      .kits-col-1, .kits-col-2, .kits-col-3 {
+        margin-left: 20px;
+        margin-right: 20px;
+        width: 100%;
+        padding: 10px;
+      }
+    }
+
+    /* Card container - gap 20px entre elementos como na original */
+    .card-box {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 0 0 20px;
+      margin-top: 30px;
+      border-radius: 30px;
+      gap: 20px;
+      border: 5px solid #87c7bc;
+      border-top-width: 10px;
+      background: rgba(235, 13, 13, 0.07);
+    }
+    .card-box.highlight {
+      border-color: #156558;
+      border-width: 4px;
+      border-radius: 26px;
+      box-shadow: 0 0 10px 2px #2fcdb3;
+      margin-top: 30px;
+    }
+    .card-box.popular {
+      border-color: #87c7bc;
+      border-width: 5px;
+      border-top-width: 10px;
+      border-right-width: 5px;
+      border-left-width: 4px;
+      margin-top: 70px;
+    }
+    @media (max-width: 1024px) {
+      .card-box { border-width: 3px; margin-top: 0; }
+      .card-box.popular { margin-top: 0; border-width: 3px; }
+    }
+
+    /* Cabeçalho do card */
+    .card-header {
+      padding: 15px 0 5px;
+      margin-top: -2px;
+      border-radius: 16px 16px 0 0;
+      text-align: center;
+    }
+    .card-header.teal { background: #87c7bc; }
+    .card-header.green { background: linear-gradient(180deg, #1ea891 16%, #104139 99%); border-radius: 22px 22px 0 0; }
+    .card-title {
+      font-family: 'Roboto', sans-serif;
+      font-size: 37px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      padding-bottom: 5px;
+    }
+    .card-header.green .card-title { color: #fff; }
+    .card-subtitle {
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 20px;
+      color: #333;
+      padding-top: 15px;
+      padding-bottom: 5px;
+      margin: 0;
+    }
+    .card-header.green .card-subtitle { color: #fff; }
+    @media (max-width: 1024px) {
+      .card-title { font-size: 32px; }
+      .card-header.green .card-title { font-size: 32px; }
+      .card-subtitle { font-size: 17px; }
+      .card-header.green .card-subtitle { font-size: 17px; }
+    }
+
+    /* Bottles text */
+    .card-bottles {
+      text-align: center;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 10px;
+      padding: 0;
+    }
+    @media (max-width: 480px) { .card-bottles { line-height: 0; } }
+
+    /* Imagem do produto */
+    .card-image {
+      text-align: center;
+      padding: 0;
+    }
+    .card-image img {
+      max-width: 92%;
+      width: 240px;
+      height: auto;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    @media (max-width: 1024px) { .card-image img { max-width: 100%; width: 260px; } }
+    @media (max-width: 480px) { .card-image img { max-width: 92%; width: 220px; } }
+
+    /* Preço */
+    .card-price-wrap {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 33px 0 20px;
+      gap: 0 8px;
+    }
+    @media (max-width: 480px) {
+      .card-price-wrap { padding-top: 30px; }
+      .card-box.popular .card-price-wrap { padding-top: 40px; }
+    }
+    .card-price-symbol {
+      font-family: 'Roboto', sans-serif;
+      font-size: 27px;
+      font-weight: 900;
+      color: #1a1a1a;
+      line-height: 22px;
+      margin-top: -20px;
+    }
+    .card-price-value {
+      font-family: 'Roboto', sans-serif;
+      font-size: 86px;
+      font-weight: 900;
+      color: #212529;
+      line-height: 0;
+    }
+    @media (max-width: 1024px) { .card-price-value { font-size: 71px; } }
+    @media (max-width: 480px) { .card-price-value { font-size: 100px; } }
+
+    .card-price-label {
+      text-align: center;
+      font-size: 20px;
+      font-weight: 900;
+      color: #1a1a1a;
+      padding: 5px 0;
+    }
+    @media (max-width: 480px) { .card-price-label { font-size: 25px; font-weight: 400; } }
+
+    /* Divisor - wrapper com padding 0 na original */
+    .divider {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    .divider-line {
+      width: 90%;
+      margin: 0 auto;
+      border-top: 1px solid #000;
+    }
+
+    /* Benefícios */
+    .card-benefit {
+      text-align: center;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 0;
+      padding: 0;
+    }
+    .card-benefit.save { color: #407e47; }
+    .card-benefit.save-big { color: #407e47; text-shadow: 0 0 11px #13806e; font-size: 19px; }
+    .card-benefit.guarantee { color: #333; }
+    @media (max-width: 1024px) { .card-benefit { font-size: 12px; } }
+    @media (max-width: 480px) { .card-benefit { font-size: 17px; } }
+
+    /* Botão CTA */
+    .card-cta-wrap {
+      width: 78%;
+      margin: 0 auto;
+      padding: 0;
+    }
+    @media (max-width: 1024px) { .card-cta-wrap { width: 90%; } }
+    @media (max-width: 480px) { .card-cta-wrap { width: 85%; } }
+    .card-box.popular .card-cta-wrap { width: 78%; }
+    @media (max-width: 480px) { .card-box.popular .card-cta-wrap { width: 81%; margin-top: -5px; } }
+
+    .btn-cta {
+      display: block;
+      width: 100%;
+      padding: 12px 30px;
+      font-family: Arial, sans-serif;
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 30px;
+      color: #fff;
+      text-align: center;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+      background: linear-gradient(180deg, #ff9b00 51%, #ac6a00 0);
+      box-shadow: 0 0 11px 2px #ff9b00;
+    }
+    .card-box.highlight .btn-cta { padding-left: 60px; padding-right: 60px; }
+    .card-box.popular .btn-cta { padding-left: 36px; padding-right: 36px; }
+    @media (max-width: 1024px) {
+      .btn-cta { font-size: 24px; padding: 12px 30px; }
+      .card-box.highlight .btn-cta { padding-left: 30px; padding-right: 30px; }
+      .card-box.popular .btn-cta { padding-left: 30px; padding-right: 30px; }
+    }
+    @media (max-width: 480px) {
+      .btn-cta { width: 80%; margin: 0 auto; font-size: 22px; padding: 12px 35px; }
+      .card-box.highlight .btn-cta { padding-left: 35px; padding-right: 35px; }
+      .card-box.popular .btn-cta { padding-left: 35px; padding-right: 35px; }
+    }
+    /* Total e Shipping */
+    .card-total {
+      text-align: center;
+      font-size: 19px;
+      line-height: 17px;
+      padding: 0;
+    }
+    .card-box.highlight .card-total { margin-top: -10px; }
+    .card-total s { color: #666; }
+    .card-shipping {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 500;
+      color: #fffbfb;
+      line-height: 17px;
+      padding: 5px 40px;
+      border-radius: 5px;
+      background: #78bcb1;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .card-shipping.free {
+      background: linear-gradient(180deg, #1ea891 16%, #104139 99%);
+      padding: 5px 40px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .card-box.highlight .card-shipping.free { margin-top: -7px; }
+    @media (max-width: 1024px) {
+      .card-shipping { font-size: 20px; padding-left: 7px; padding-right: 7px; }
+      .card-shipping.free { padding-left: 7px; padding-right: 7px; }
+    }
+
+    /* Footer links - original padding-top:4px; padding-bottom:4px */
+    .footer-links {
+      background: #f2f5f4;
+      padding: 20px 0 4px;
+    }
+    @media (max-width: 480px) { .footer-links { padding: 32px 0 32px; } }
+    .footer-links-inner {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      max-width: 1142px;
+      margin: 0 auto;
+    }
+    .footer-links a {
+      font-size: 14px;
+      color: #c8bfbf;
+      line-height: 16px;
+    }
+    @media (max-width: 480px) { .footer-links a { font-size: 12px; } }
+
+    /* Disclaimer - mesmo fundo da página */
+    .disclaimer {
+      background: #f2f5f4;
+      padding: 10px;
+    }
+    .disclaimer-inner {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+    .disclaimer p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 12px;
+      color: #a3b3b0;
+      text-align: center;
+      line-height: 1.5;
+      margin: 16px 0 16px;
+    }
+
+  </style>
+  		<!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-CM9JYLBCSZ"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());		
+        gtag('config', 'G-CM9JYLBCSZ');
+      </script>
+</head>
+<body>
+  <div class="page-wrap">
+    <header class="hero">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-title">Support your ear wellness routine</h1>
+          <p class="hero-desc">Karylief is a dietary supplement. Consult your healthcare provider before use.</p>
+          <ul class="hero-features" aria-label="Informações do produto">
+            <li>30 capsules per bottle</li>
+            <li>Dietary supplement</li>
+            <li>Made in USA</li>
+          </ul>
+          <a href="#kits" class="hero-cta">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>
+            ORDER NOW
+          </a>
+          <p class="hero-guarantee">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            60-Day Money Back Guarantee
+          </p>
+          <div class="hero-secure">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+            SECURE ORDER
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="img/bene.png" alt="Suplemento dietético" width="420" height="420" loading="eager">
+        </div>
+      </div>
+    </header>
+
+    <main id="kits" class="kits-section">
+      <div class="kits-row">
+        <!-- Card 1: Try Two -->
+        <div class="kits-col kits-col-1">
+          <div class="card-box">
+            <div class="card-header teal">
+              <h2 class="card-title">Try Two</h2>
+              <h2 class="card-subtitle">60 Days Supply</h2>
+            </div>
+            <p class="card-bottles">2 Bottles</p>
+            <div class="card-image">
+              <img src="img/2.png" alt="2 garrafas" width="200" height="200" loading="eager">
+            </div>
+            <div class="card-price-wrap">
+              <span class="card-price-symbol">$</span>
+              <span class="card-price-value">79</span>
+            </div>
+            <p class="card-price-label">Per Bottle</p>
+            <div class="divider"><span class="divider-line"></span></div>
+            <p class="card-benefit save">✅ YOU SAVE $200</p>
+            <div class="divider"><span class="divider-line"></span></div>
+            <p class="card-benefit guarantee">✅ 60 Days Guarantee</p>
+            <div class="divider"><span class="divider-line"></span></div>
+            <div class="card-cta-wrap">
+              <a href="https://karylief.mycartpanda.com/checkout/200040878:1?afid=X9tMacNmKs" class="btn-cta" data-cta target="_blank" rel="noopener">BUY NOW</a>
+            </div>
+            <p class="card-total">TOTAL: <s>$358</s> <strong>$158</strong></p>
+            <p class="card-shipping">+Shipping</p>
+          </div>
+        </div>
+
+        <!-- Card 2: Good Value -->
+        <div class="kits-col kits-col-2">
+          <div class="card-box highlight">
+            <div class="card-header green">
+              <h2 class="card-title">Good Value</h2>
+              <h2 class="card-subtitle">60 Days Supply</h2>
+            </div>
+            <p class="card-bottles">6 Bottles</p>
+            <div class="card-image">
+              <img src="img/6-b.png" alt="6 garrafas" width="200" height="200" loading="eager">
+            </div>
+            <div class="card-price-wrap">
+              <span class="card-price-symbol">$</span>
+              <span class="card-price-value">49</span>
+            </div>
+            <p class="card-price-label">Per Bottle</p>
+            <div class="divider"><span class="divider-line"></span></div>
+            <p class="card-benefit save-big">✅ YOU SAVE $780</p>
+            <div class="divider"><span class="divider-line"></span></div>
+            <p class="card-benefit guarantee">✅ BIGGEST DISCOUNT</p>
+            <div class="divider"><span class="divider-line"></span></div>
+            <p class="card-benefit guarantee">✅ 60 Days Guarantee</p>
+            <div class="divider"><span class="divider-line"></span></div>
+            <div class="card-cta-wrap">
+              <a href="https://karylief.mycartpanda.com/checkout/200040880:1?afid=X9tMacNmKs" class="btn-cta" data-cta target="_blank" rel="noopener">BUY NOW</a>
+            </div>
+            <p class="card-total">TOTAL: <s>$1074</s> <strong>$294</strong></p>
+            <p class="card-shipping free">FREE Shipping</p>
+          </div>
+        </div>
+
+        <!-- Card 3: Most Popular -->
+        <div class="kits-col kits-col-3">
+          <div class="card-box popular">
+            <div class="card-header teal">
+              <h2 class="card-title">Most Popular</h2>
+              <h2 class="card-subtitle">60 Days Supply</h2>
+            </div>
+            <p class="card-bottles">3 Bottles</p>
+            <div class="card-image">
+              <img src="img/3-b.png" alt="3 garrafas" width="200" height="200" loading="eager">
+            </div>
+            <div class="card-price-wrap">
+              <span class="card-price-symbol">$</span>
+              <span class="card-price-value">69</span>
+            </div>
+            <p class="card-price-label">Per Bottle</p>
+            <div class="divider"><span class="divider-line"></span></div>
+            <p class="card-benefit save">✅ YOU SAVE $330</p>
+            <div class="divider"><span class="divider-line"></span></div>
+            <p class="card-benefit guarantee">✅ 60 Days Guarantee</p>
+            <div class="divider"><span class="divider-line"></span></div>
+            <div class="card-cta-wrap">
+              <a href="https://karylief.mycartpanda.com/checkout/200040879:1?afid=X9tMacNmKs" class="btn-cta" data-cta target="_blank" rel="noopener">BUY NOW</a>
+            </div>
+            <p class="card-total">TOTAL: <s>$537</s> <strong>$207</strong></p>
+            <p class="card-shipping free">FREE Shipping</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer-links">
+      <div class="footer-links-inner">
+        <a href="terms.html">Terms of Use</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="contact.html">Contact</a>
+        <a href="shipping.html">Shipping</a>
+        <a href="refund.html">Refund Policy</a>
+        <a href="references.html">References</a>
+      </div>
+    </footer>
+
+    <div class="disclaimer">
+      <div class="disclaimer-inner">
+        <p>This site is not a part of the Youtube website or Youtube Inc. Additionally, This site is NOT endorsed by Youtube in any way. YOUTUBE is a trademark of YOUTUBE, Inc.<br>
+        All statements and results presented on this website are for informational purposes only. They are not specific medical advice for any individual. Neither the website, nor product should substitute medical advice given by a certified health professional. If you have a health problem, or you have sensible allergies, are pregnant or diagnosed with chronic conditions, it is strongly recommended that you consult your doctor immediately and before taking any pills or supplements. Individual results may vary depending on the case. Copyright © 2025. All Rights Reserved.</p>
+        <p>This website is an independent promotional page. We do not manufacture or sell the product directly.</p>
+        <p>This website operates as an affiliate and may receive a commission for referrals.</p>
+        <p>You will be redirected to the official manufacturer’s website to complete your purchase.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
